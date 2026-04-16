@@ -1,0 +1,46 @@
+{
+  "name": "@asterpay/radar",
+  "version": "1.0.0",
+  "description": "GitHub ecosystem intelligence scanner for AI agents. MCP Server with 4 tools: scan repos, trending, compare, configure keywords. Works with Cursor, Claude, Copilot, Windsurf.",
+  "type": "module",
+  "bin": {
+    "asterpay-radar": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github",
+    "radar",
+    "scanner",
+    "ecosystem-intelligence",
+    "asterpay",
+    "ai-agents",
+    "trending-repos",
+    "developer-tools"
+  ],
+  "author": "AsterPay <investor@asterpay.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsterPayDev/asterpay-radar"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
