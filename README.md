@@ -6,35 +6,23 @@ Built for tracking the [x402](https://x402.org) and agent payment ecosystem, but
 
 ## Setup
 
+Clone and build:
+
+```bash
+git clone https://github.com/petteri74dev/radar.git
+cd radar
+npm install
+npm run build
+```
+
 Add to your MCP client config (Cursor, Claude Code, Claude Desktop, Copilot, Windsurf — anything that speaks MCP):
 
 ```json
 {
   "mcpServers": {
     "radar": {
-      "command": "npx",
-      "args": ["-y", "@AsterPay/radar"],
-      "env": {
-        "GITHUB_TOKEN": "ghp_..."
-      }
-    }
-  }
-}
-```
-
-Or clone and run locally:
-
-```bash
-git clone https://github.com/petteri74dev/radar.git
-cd radar && npm install && npm run build
-```
-
-```json
-{
-  "mcpServers": {
-    "radar": {
       "command": "node",
-      "args": ["/path/to/radar/dist/index.js"],
+      "args": ["/absolute/path/to/radar/dist/index.js"],
       "env": {
         "GITHUB_TOKEN": "ghp_..."
       }
@@ -42,6 +30,8 @@ cd radar && npm install && npm run build
   }
 }
 ```
+
+Restart your MCP client. That's it.
 
 ## Tools
 
